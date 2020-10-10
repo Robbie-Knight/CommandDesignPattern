@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
+/** StockDriver declares necessary variable Scanner in
+*/
 public class StockDriver {
 	Scanner in;
 	
+	/** runStockDriver runs while true and places order for stock commands
+	*/
 	public void runStockDriver() {
 		in = new Scanner(System.in);
 
@@ -39,15 +43,23 @@ public class StockDriver {
 		System.out.println("Goodbye");
 	}
 	
+	/** getStockNamw returns getInputLIne(stockname)
+	*/
 	public String getStockName() {
 		return getInputLine("Enter Stock Name");
 	}
 	
+	/** getNumStocks set String num equal to getInputLine(Stock)
+	returns integer.parseInt(num)
+	*/
 	public int getNumStocks() {
 		String num = getInputLine("Enter Number of Stock");
 		return Integer.parseInt(num);
 	}
 	
+	/** getInputLine has parameter String prompt
+	returns in.nextLine().toLowerCase().trim()
+	*/
 	private String getInputLine(String prompt) {
 		System.out.print(prompt + ": ");
 		return in.nextLine().toLowerCase().trim();
